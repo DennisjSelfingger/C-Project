@@ -15,7 +15,7 @@ Add a New Password:
 The application will first ask if you want to add a new password. Reply with 'y' (yes) or 'n' (no).
 If you choose 'y', you will be prompted to enter the name of the site.
 Next, you can choose to generate a random password or enter your own.
-To generate a random password, reply with 'y' when asked. The application will generate a secure password for you and display it.
+To generate a random password, reply with 'y' when asked. The application will generate and display a secure password for you.
 To enter your own password, reply with 'n' and then type your password.
 The application will confirm that the password has been successfully saved.
 Retrieve a Password:
@@ -34,3 +34,51 @@ Password added successfully!
 Password saved.
 
 example.com: X7gfa#4!0sKm
+HERE IS THE PSEUDOCODE
+Program PasswordManager
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Again, this is just a simple app, so please do not count on this for securing your passwords. It still needs work and better encryption.!!!!!!!!!!!!!!!!!
+
+Class PasswordManager:
+    Define passwords as a map of strings to strings
+
+    Constructor PasswordManager:
+        Initialize passwords
+
+    Destructor PasswordManager:
+        Clean up any resources if necessary
+
+    Function addPassword(site, password):
+        Try to add (site, password) to passwords
+        Return true if added, false if site already exists
+
+    Function removePassword(site):
+        Remove the password for the given site
+        Return true if removed, false if site does not exist
+
+    Function getPassword(site):
+        Return the password for the given site, or an empty string if not found
+
+    Function listAll:
+        Print all site-password pairs
+
+    Function generatePassword(length):
+        Generate a random password of the given length
+        Return the generated password
+
+Main Program:
+    Create an instance of PasswordManager
+
+    Ask the user if they want to add a new password
+    If yes:
+        Prompt for the site name
+        Ask if the user wants to generate a random password
+        If yes:
+            Generate a random password and display it
+        Else:
+            Prompt the user to enter a password
+        Add the password for the site
+        Display a success or failure message
+
+    Optionally, list all passwords
+
+    End program
